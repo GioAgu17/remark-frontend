@@ -18,7 +18,7 @@ export default function Offers() {
   const [isDeleting, setIsDeleting] = useState(false);
   useEffect(() => {
     function loadOffer() {
-      return API.get("remark", `/getBusinessInfo/${id}`);
+      return API.get("remark", `/remark/getBusinessInfo/${id}`);
     }
 
     async function onLoad() {
@@ -53,7 +53,7 @@ export default function Offers() {
   }
 
   function saveOffer(offer) {
-    return API.put("remark", `/updateOffer/${id}`, {
+    return API.put("remark", `/remark/updateOffer/${id}`, {
       body: offer
     });
   }
@@ -92,7 +92,7 @@ export default function Offers() {
   }
 
   function deleteOffer() {
-    return API.del("remark", `/deleteOffer/${id}`);
+    return API.del("remark", `/remark/deleteOffer/${id}`);
   }
 
   async function handleDelete(event) {

@@ -48,7 +48,7 @@ export default function NewOffer() {
   }
 
   function createOffer(offer) {
-    return API.post("remark", "/createBusinessInfo", {
+    return API.post("remark", "/remark/createBusinessInfo", {
       body: offer
     });
   }
