@@ -31,7 +31,7 @@ export default function Routes() {
       <AuthenticatedRoute exact path="/offers/:id">
         <Offers />
       </AuthenticatedRoute>
-      /* finally catch all routes not found */
+      {/* finally catch all routes not found */}
       <Route>
         <NotFound />
       </Route>
