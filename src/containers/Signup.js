@@ -13,7 +13,6 @@ import { onError } from "../libs/errorLib";
 import "./Signup.css";
 import { Auth } from "aws-amplify";
 
-
 export default function Signup() {
   const [fields, handleFieldChange] = useFormFields({
     email: "",
@@ -55,6 +54,7 @@ export default function Signup() {
         setIsLoading(false);
     }
   }
+
 
   async function handleConfirmationSubmit(event) {
     event.preventDefault();

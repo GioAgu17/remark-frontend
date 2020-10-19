@@ -19,6 +19,7 @@ export default function Login() {
     return fields.email.length > 0 && fields.password.length > 0;
   }
 
+
   async function handleSubmit(event) {
     event.preventDefault();
 
