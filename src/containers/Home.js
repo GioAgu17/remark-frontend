@@ -31,7 +31,7 @@ export default function Home() {
   }, [isAuthenticated]);
 
   function loadOffers() {
-    return API.get("remark", "/listOffers");
+    return API.put("remark", "/remark/listOffers");
   }
 
   function renderOffersList(offers) {
