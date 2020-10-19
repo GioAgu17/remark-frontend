@@ -5,6 +5,7 @@ import { onError } from "../libs/errorLib";
 import "./Home.css";
 import { API } from "aws-amplify";
 import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [offers, setOffers] = useState([]);
@@ -58,6 +59,14 @@ export default function Home() {
       <div className="lander">
         <h1>Remark</h1>
         <p>Where business meets the future of marketing</p>
+        <div>
+          <Link to="/login" className="btn btn-info btn-lg">
+            Login
+          </Link>
+          <Link to="/signup" className="btn btn-success btn-lg">
+            Signup
+          </Link>
+        </div>
       </div>
     );
   }
