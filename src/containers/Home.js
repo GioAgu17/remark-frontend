@@ -6,6 +6,7 @@ import "./Home.css";
 import { API } from "aws-amplify";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
+import { s3Download } from "../libs/awsLib";
 
 export default function Home() {
   const [offers, setOffers] = useState([]);
@@ -18,8 +19,11 @@ export default function Home() {
       }
 
       try {
-        const offers = await loadOffers();
-        setOffers(offers);
+        //const offers = await loadOffers();
+        //setOffers(offers);
+        const fileKey = "1618156157582-Score.PNG";
+        const result = await s3Download(fileKey);
+        console.log(result);
       } catch (e) {
         onError(e);
       }

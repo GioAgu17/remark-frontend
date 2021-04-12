@@ -38,8 +38,8 @@ export default function NewOffer() {
 
     try {
       const attachment = file.current ? await s3Upload(file.current) : null;
-
-      await createOffer({ content, attachment });
+      console.log("called s3 upload");
+      //await createOffer({ content, attachment });
       history.push("/");
     } catch (e) {
       onError(e);
